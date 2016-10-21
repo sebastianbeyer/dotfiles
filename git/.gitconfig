@@ -1,0 +1,42 @@
+[user]
+	email = sebastian.beyer@awi.de
+	name = Sebastian Beyer
+[push]
+  default = simple
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	pager = true
+  ui = auto
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset' --abbrev-commit --date=relative
+	st = status
+	di = diff
+	co = checkout
+	ci = checkin
+	sh = show
+	su = submodule update
+	f  = fetch
+	up = pull
+	rb = rebase
+	br = branch
+	db = branch -D
+	rom = rebase origin/master
+	staged = diff --cached
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f
+
+[diff]
+	compactionHeuristic = true
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
