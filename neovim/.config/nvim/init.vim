@@ -50,6 +50,10 @@ let g:mapleader = ","                                                           
 
 let g:enable_bold_font = 1                                                      "Enable bold font in colorscheme
 
+" this is needed to make some things work maybe?
+set shell=bash
+
+
 " ================ General Config ====================
 
 set t_Co=256                                                                    "Set 256 colors
@@ -310,7 +314,11 @@ let g:neosnippet#snippets_directory = [
             \ '~/.config/nvim/bundle/vim-snippets/snippets',
             \ '~/.config/nvim/snippets']
 
-let g:deoplete#enable_at_startup = 1                                            "Enable deoplete autocompletion
+
+if has("nvim")
+    " deoplete needs neovim
+    let g:deoplete#enable_at_startup = 1                                            "Enable deoplete autocompletion
+endif
 
 let g:ackhighlight = 1                                                          "Highlight current search
 
