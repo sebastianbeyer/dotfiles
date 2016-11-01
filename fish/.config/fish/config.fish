@@ -1,3 +1,6 @@
+function fish_greeting
+end
+
 function pwd_prompt
   if test $PWD = $HOME
     echo "~"
@@ -27,18 +30,18 @@ function fish_prompt
   printf "%s%s%s@%s%s%s:%s%s%s%s» " (set_color --bold FD971F) (whoami) (set_color normal) (set_color --bold F92672) (hostname) (set_color normal) (set_color 66D9EF) (pwd_prompt) (set_color normal) (__terlar_git_prompt)
 end
 
-function fish_right_prompt
-  set -l _status $status
-  echo -n "⟦"
-  if test $_status = 0
-    set_color --bold A6E22E
-  else
-    set_color --bold EF5939
-  end
-  date +"%T"
-  set_color normal
-  echo -n "⟧"
-end
+# function fish_right_prompt
+#   set -l _status $status
+#   echo -n "⟦"
+#   if test $_status = 0
+#     set_color --bold A6E22E
+#   else
+#     set_color --bold EF5939
+#   end
+#   date +"%T"
+#   set_color normal
+#   echo -n "⟧"
+# end
 
 function fish_mode_prompt
   current_mode
