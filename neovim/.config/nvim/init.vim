@@ -71,6 +71,7 @@ set showmatch                                                                   
 set nostartofline                                                               "Jump to first non-blank character
 set timeoutlen=1000 ttimeoutlen=200                                             "Reduce Command timeout for faster escape and O
 set fileencoding=utf-8                                                          "Set utf-8 encoding on write
+set encoding=utf-8                                                              "Set utf-8 encoding
 set nowrap                                                                        "Enable word wrap
 set linebreak                                                                   "Wrap lines at convenient points
 set listchars=tab:\ \ ,trail:·                                                  "Set trails for tabs and spaces
@@ -334,6 +335,9 @@ let g:delimitMate_expand_cr = 1                                                 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '                                "Set up spacing for sidebar icons
 
 let g:tex_flavor = 'latex'
+
+" disable conceal for active line in all modes
+set concealcursor = ""
 
 " ------ fortran linting
 
