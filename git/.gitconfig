@@ -1,5 +1,5 @@
 [user]
-	email = sebastian.beyer@awi.de
+	email = sebastian.beyer@riseup.net
 	name = Sebastian Beyer
 [push]
   default = simple
@@ -40,3 +40,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[credential]
+	helper = cache --timeout=3600
